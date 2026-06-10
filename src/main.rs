@@ -50,7 +50,7 @@ fn main() {
                 .expect("Error reading input");
             let idx:usize = idx.trim().parse().expect("Error parsing to usize!");
             let spied_country = map.get_country_by_index(idx-1);
-            if player.get_country() == spied_country{
+            if player.get_country() == *spied_country{
                 println!("You can't spy on your own nation!");
             }else{
                 println!("Espionage successful.\nCountry information:");
