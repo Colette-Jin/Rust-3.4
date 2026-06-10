@@ -15,8 +15,8 @@ impl Player{
         println!("Population: {}", self.country.get_population());
         println!("Army size: {}", self.country.get_army_size());
     }
-    pub fn get_country(&mut self)->&mut Country{
-        &mut self.country
+    pub fn get_country(&self)->&Country{
+        &self.country
     }//The `get_country` function returns a reference to the country selected by the player.
     pub fn conquer_nation(&mut self,target:&Country,name:&str){
         let mut target = target.clone();
